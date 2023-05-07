@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '';
+import 'data.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatefulWidget {
@@ -13,7 +13,7 @@ class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 20, 20, 20),
+      backgroundColor: ColorCS.bgColor,
       body: Container(
         margin: EdgeInsets.fromLTRB(30, 15, 30, 0),
         child: ListView(
@@ -26,7 +26,7 @@ class HomePageState extends State<HomePage> {
                 children: [
                   Container(
                     child: Icon(
-                      Icons.menu,
+                      Icons.notes,
                       color: Colors.grey[400],
                       size: 40.0,
                     ),
@@ -74,14 +74,14 @@ class HomePageState extends State<HomePage> {
                   ),
                   Positioned(
                     left: 100,
-                    top: 30,
+                    // top: 10,
                     child: Container(
                       // margin: EdgeInsets.only(20),
                       // color: Colors.pink,
-                      height: 200,
+                      height: 300,
                       width: 400,
                       child: Image.asset(
-                        'img/bua.png',
+                        'img/buahh.png',
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -182,9 +182,9 @@ class HomePageState extends State<HomePage> {
                 children: [
                   Container(
                     child: Text(
-                      'Recomended Fruit',
+                      'Recomended Fruits',
                       style: GoogleFonts.poppins(
-                          fontSize: 20,
+                          fontSize: 25,
                           color: Colors.grey[350],
                           fontWeight: FontWeight.w400),
                     ),
@@ -230,7 +230,7 @@ class HomePageState extends State<HomePage> {
                                 children: [
                                   Container(
                                     width: 200,
-                                    height: 250,
+                                    height: 200,
                                     decoration: BoxDecoration(
                                         borderRadius: BorderRadius.only(
                                           topLeft: Radius.circular(9999),
@@ -247,8 +247,7 @@ class HomePageState extends State<HomePage> {
                                       height: 200,
                                       decoration: BoxDecoration(
                                         image: DecorationImage(
-                                            image:
-                                                AssetImage('img/nagaboy.png')),
+                                            image: AssetImage('img/nanas.png')),
                                         borderRadius: BorderRadius.circular(15),
                                       ),
                                     ),
@@ -361,7 +360,7 @@ class HomePageState extends State<HomePage> {
                   ),
                 ),
                 SizedBox(
-                  width: 20,
+                  width: 40,
                 ),
                 Container(
                   margin: EdgeInsets.only(top: 30),
@@ -375,7 +374,7 @@ class HomePageState extends State<HomePage> {
                                 children: [
                                   Container(
                                     width: 200,
-                                    height: 250,
+                                    height: 200,
                                     decoration: BoxDecoration(
                                         borderRadius: BorderRadius.only(
                                           topLeft: Radius.circular(9999),
@@ -392,8 +391,10 @@ class HomePageState extends State<HomePage> {
                                       height: 200,
                                       decoration: BoxDecoration(
                                         image: DecorationImage(
-                                            image:
-                                                AssetImage('img/nagaboy.png')),
+                                            image: AssetImage(
+                                              'img/apl.png',
+                                            ),
+                                            fit: BoxFit.cover),
                                         borderRadius: BorderRadius.circular(15),
                                       ),
                                     ),
@@ -461,7 +462,7 @@ class HomePageState extends State<HomePage> {
                                       padding: EdgeInsets.only(left: 10),
                                       alignment: AlignmentDirectional.topStart,
                                       child: Text(
-                                        'Pineapple',
+                                        'Apple',
                                         style: GoogleFonts.poppins(
                                             fontSize: 25, color: Colors.white),
                                       ),
@@ -511,7 +512,58 @@ class HomePageState extends State<HomePage> {
           ],
         ),
       ),
-      // bottomNavigationBar: ,
+      bottomNavigationBar: Container(
+        decoration: BoxDecoration(
+          color: Color.fromRGBO(44, 44, 44, 1),
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(15),
+            topRight: Radius.circular(15),
+          ),
+        ),
+        height: 50,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                  border:
+                      Border(top: BorderSide(color: Colors.amber, width: 2))),
+              child: IconButton(
+                onPressed: () {},
+                icon: Icon(
+                  Icons.home,
+                  color: Colors.orange[400],
+                  size: 30,
+                ),
+              ),
+            ),
+            IconButton(
+              onPressed: () {},
+              icon: Icon(
+                Icons.search,
+                color: Colors.white,
+                size: 30,
+              ),
+            ),
+            IconButton(
+              onPressed: () {},
+              icon: Icon(
+                Icons.favorite,
+                color: Colors.white,
+                size: 30,
+              ),
+            ),
+            IconButton(
+              onPressed: () {},
+              icon: Icon(
+                Icons.note_alt,
+                color: Colors.white,
+                size: 30,
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
