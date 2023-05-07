@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'data.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:blurrycontainer/blurrycontainer.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -73,7 +75,8 @@ class HomePageState extends State<HomePage> {
                     ),
                   ),
                   Positioned(
-                    left: 100,
+                    left: 120,
+                    // right: -10,
                     // top: 10,
                     child: Container(
                       // margin: EdgeInsets.only(20),
@@ -91,7 +94,7 @@ class HomePageState extends State<HomePage> {
                     top: 70,
                     left: 20,
                     child: Container(
-                      width: 400,
+                      width: 420,
                       height: 230,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(12),
@@ -315,7 +318,7 @@ class HomePageState extends State<HomePage> {
                                       padding: EdgeInsets.only(left: 10),
                                       alignment: AlignmentDirectional.topStart,
                                       child: Text(
-                                        'Pineapple',
+                                        'Pinneapple',
                                         style: GoogleFonts.poppins(
                                             fontSize: 25, color: Colors.white),
                                       ),
@@ -556,7 +559,7 @@ class HomePageState extends State<HomePage> {
             IconButton(
               onPressed: () {},
               icon: Icon(
-                Icons.note_alt,
+                Icons.task,
                 color: Colors.white,
                 size: 30,
               ),
