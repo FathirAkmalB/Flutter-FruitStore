@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'home.dart';
 import 'detailProduct.dart';
-// import 'package:google_fonts/google_fonts.dart';
-// import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+
 
 
 void main() {
@@ -20,7 +19,7 @@ class MyApp extends StatelessWidget {
       title: 'Tugas Flutter',
       theme: ThemeData(
       ),
-      home: const DetailProduct(),
+      home: const HomePage(),
     );
   }
 }

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'data.dart';
+import 'detailProduct.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:blurrycontainer/blurrycontainer.dart';
+// import 'package:blurrycontainer/blurrycontainer.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -66,14 +67,6 @@ class HomePageState extends State<HomePage> {
             Container(
               child: Stack(
                 children: [
-                  Container(
-                    margin: EdgeInsets.only(top: 20),
-                    height: 300,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(40),
-                      color: Color.fromARGB(110, 78, 78, 78),
-                    ),
-                  ),
                   Positioned(
                     left: 120,
                     // right: -10,
@@ -89,6 +82,15 @@ class HomePageState extends State<HomePage> {
                       ),
                     ),
                   ),
+                  Container(
+                    margin: EdgeInsets.only(top: 20),
+                    height: 300,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(40),
+                      color: Color.fromARGB(110, 78, 78, 78),
+                    ),
+                  ),
+                  
                   // title for ads
                   Positioned(
                     top: 70,
@@ -245,13 +247,22 @@ class HomePageState extends State<HomePage> {
                                   Positioned(
                                     left: 10,
                                     top: 20,
-                                    child: Container(
-                                      width: 180,
-                                      height: 200,
-                                      decoration: BoxDecoration(
-                                        image: DecorationImage(
-                                            image: AssetImage('img/nanas.png')),
-                                        borderRadius: BorderRadius.circular(15),
+                                    child: GestureDetector(
+                                      onTap: () {
+                                        setState(() {
+                                          Navigator.push(
+                                            context, MaterialPageRoute(builder: (context) => DetailProduct()),
+                                          );
+                                        });
+                                      },
+                                      child: Container(
+                                        width: 180,
+                                        height: 200,
+                                        decoration: BoxDecoration(
+                                          image: DecorationImage(
+                                              image: AssetImage('img/nanas.png')),
+                                          borderRadius: BorderRadius.circular(15),
+                                        ),
                                       ),
                                     ),
                                   ),
